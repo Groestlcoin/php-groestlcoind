@@ -1,8 +1,8 @@
 {
-    "name": "lmlsna/php-bitcoind",
+    "name": "groestlcoin/php-groestlcoind",
     "autoload": {
         "psr-4" : {
-            "lmlsna\bitcoind" : ""
+            "groestlcoin\groestlcoind" : ""
         }
     }
 }

@@ -1,21 +1,21 @@
 <?php
 
-namespace 'lmlsna';
+namespace 'groestlcoin';
 
-Class bitcoind {
+Class groestlcoind {
 
 /**
- * Simple PHp library for thw Bitcoin/Litecoin JSON-RPC 1.0/2.0 protocol function
+ * Simple PHp library for the Groestlcoin JSON-RPC 1.0/2.0 protocol function
  * powered by cURL
  *
  * This is a simple, single-function, jsonrpc 1.0/2.0 PHP  wrapper for
- * bitcoind style daemons. It reqires the php-curl module to be installed.
+ * groeslcoind daemon. It requires the php-curl module to be installed.
  *
  * There are several MUCH more verbose jsonrpc wrappers for PHP, but
  * this straight-forward implementation is probably just fine for almost every
  * jsonrpc related thing you want to do in PHP (actually maybe overkill).
  *
- * The fumction takes 1 required, and 4 optional rpc arguments. A sane and
+ * The function takes 1 required, and 4 optional rpc arguments. A sane and
  * spec compliant default of the current epoch time is used for 'id'
  * if you do not specify one. The jsonrpc version is set to '2.0' but works just as
  * well if you need to set it to '1.0'. An empty array is used if no params are
@@ -32,14 +32,14 @@ Class bitcoind {
  * as a stringy $param.
  *
  * Usage:
- *     $obj = jsonrpc('getblockhash', array(1), 'http://user:pass@127.0.0.1:9332/path', 'an id', '2.0' )
+ *     $obj = jsonrpc('getblockhash', array(1), 'http://user:pass@127.0.0.1:1441/path', 'an id', '2.0' )
  *     $obj = jsonrpc('getblockhash', 1 ); // also works
  */
 
 private $rpcuser = 'rpc_username';
 private $prcpass = 'rpc_password';
 private $rpchost = '127.0.0.1';
-private $rpcport = 9332;
+private $rpcport = 1441;
 private $rpcproto = 'http';
 
 public function jsonrpc( $method, $params=array(), $id='', $jsonrpc='1.0') {
